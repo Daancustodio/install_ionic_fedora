@@ -10,13 +10,11 @@ caso o proxy mude, é só configurar a variavél.
 
 Dar permissão de execução ao arquivo
 
-
-
-  $ chmod +x ionic_install_fedora_64.sh
+	$ chmod +x ionic_install_fedora_64.sh
 
 Executar como root o arquivo
 
-  $ ./ionic_install_fedora_64.sh
+	$ ./ionic_install_fedora_64.sh
 
 No próprio script tem uma descrição de tudo que será feito, segue um resumo.
 
@@ -43,7 +41,7 @@ Após rodar o script ainda é preciso instalar manualmente as APIs do Android pa
 
 para isso abra o terminal como root e digite
 
-  $ android
+	$ android
 
 baixar os packages da ultima versão da API, SDK Build-tools, SDK tools e o Extra Android Support Library
 
@@ -61,13 +59,14 @@ incluir no arquivo
 
 colocar na linha 419 abaixo da sequinte linha
 
-if (self.strictSSL === false) {
- self.rejectUnauthorized = false
-}
+	if (self.strictSSL === false) {
+	 self.rejectUnauthorized = false
+	}
 
- self.proxy = 'http://192.168.25.2:3128';
+	 self.proxy = 'http://192.168.25.2:3128';
 
 
 ou usar no próprio comando ionic passando o proxy
 Ex:
-  $ PROXY=http://192.168.25.2:3128 ionic start aplicativo tabs
+
+	$ PROXY=http://192.168.25.2:3128 ionic start aplicativo tabs
